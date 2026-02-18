@@ -1,0 +1,48 @@
+.offcanvas{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(35, 11, 58) !important;
+    color: #fff !important;
+    position: absolute;
+    height: 100%;
+}
+.offcanvas-body > ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+.offcanvas-body > ul > li{
+    width: 100%;
+    margin: 10px ;
+    padding: 10px;
+}
+
+.offcanvas-body > ul > li:hover{
+    border-radius: 25px;
+    background-color: rgb(48, 15, 80);
+}
+
+.offcanvas-body > ul > li > a{
+    color: #fff !important;
+    margin-left: 20px;
+}
+
+.bg-orange{
+    background-color: orangered;
+}
+
+.btn-close{
+    background-color: #fff !important;
+}
+
+.active{
+    background-color: rgb(48, 15, 80);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.nav-item{
+    display: flex;
+    align-items: center;
+}
+
+

@@ -19,15 +19,15 @@ const Main: React.FC = () => {
             setMenu(data?.data?.Components?.find((comp: any) => comp.__component === 'homecare.menu') || null);
             setFooter(data?.data?.Components?.find((comp: any) => comp.__component === 'my-components.footer') || null);
 
-    });
-  }, []);
+        });
+    }, []);
     
 
     return (
         <>
             {header && <Header {...header} />}
             {menu && <Drawer {...menu} />}
-            <main>
+            <main className="container">
                 <Outlet />
             </main>
             {footer && <FooterComponent {...footer} />}

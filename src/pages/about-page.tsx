@@ -1,12 +1,26 @@
-
+import { useEffect, useState } from "react";
+import PageService from "../services/page-service";
 
 const AboutPage = () => {
+  const [aboutpage, setAboutPage] = useState<any>(null);
+
+  useEffect(() => {
+    // Fetch about page data from Strapi
+    new PageService().getAboutPage()
+      .then(data => {
+        setAboutPage(data?.data?.about);
+      })
+      .catch(error => console.error("Error fetching about page data:", error));
+  }, []);
+
+
   return (
     <div>
-      <h1>About Us</h1>
-      <p>Welcome to our website! We are dedicated to providing the best service possible.</p>
-      <p>Our team is passionate about delivering high-quality products and exceptional customer support.</p>
-      <p>Thank you for visiting our site, and we hope you have a great experience!</p>
+      {aboutpage ? (
+        <div dangerouslySetInnerHTML={{ __html: aboutpage }} />
+      ) : (
+        <p>Loading about page data...</p>
+      )}
     </div>
   );
 };

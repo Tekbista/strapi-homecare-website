@@ -1,0 +1,57 @@
+.card{
+    font-family: 'Times New Roman', Times, serif;
+    border: none !important;
+    background-color: rgb(208, 250, 243);
+}
+.card-body{
+    background-color: blueviolet;
+    border-radius: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #fff;
+    text-align: center;
+}
+
+.card-body:hover{
+    cursor: pointer;
+    background-color: rgb(35, 11, 58);
+}
+
+.card-body > a{
+    color: #fff;
+    font-size: large;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 912px){
+    .card-body > h4{
+        font-size: medium;
+    }
+}
+
+.card > img{
+    height: 300px;
+    width: 300px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    align-self: center;
+    transition: .5s ease-out;
+}
+
+.card >img:hover{
+    box-shadow: 
+        0 0 10px rgb(229, 243, 85),
+        0 0 20px rgb(229, 243, 85),
+        0 0 40px rgb(229, 243, 85),
+        0 0 80px rgb(229, 243, 85);
+       
+    border: 5px solid rgb(229, 243, 85);
+
+}
+
+@media only screen and (max-width: 912px){
+    .card >img{
+        height: 150px;
+        width: 150px;
+    }
+}

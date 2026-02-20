@@ -19,7 +19,7 @@ class PageService {
   private homepageUrl: string = this.apiBaseUrl + this.homePageQueryParam;
 
   private aboutPageQueryParam: string = "about-page";
-  private servicePageQueryParam: string = "service-page";
+  private servicePageQueryParam: string = "service-page?populate[services][on][homecare.services][populate][services][populate]=*";
   private aboutPageUrl: string = this.apiBaseUrl + this.aboutPageQueryParam;
   private servicePageUrl: string = this.apiBaseUrl + this.servicePageQueryParam;
   
@@ -40,7 +40,7 @@ class PageService {
     }
 
     const data = await response.json();
-    console.log("Fetched homepage data: ", data);
+   
     return data;
   }
 
@@ -60,7 +60,7 @@ class PageService {
     }
 
     const data = await response.json();
-    console.log("Fetched about page data: ", data);
+   
     return data;
   }
 
@@ -80,7 +80,7 @@ class PageService {
     }
 
     const data = await response.json();
-    console.log("Fetched service page data: ", data);
+    
     return data;
   }
 }
